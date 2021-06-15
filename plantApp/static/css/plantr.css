@@ -1,0 +1,204 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+   /* border: red 1px solid; */
+   width: 100%;
+   background: #8e9775;
+   background: url("../../../static/plantr.jpeg") no-repeat center center fixed;
+   background-size: cover;
+}
+
+.navbar-text a {
+   color: #faf2da !important;
+   text-decoration: none;
+}
+
+.container-lg.main {
+   /* background-color: rgba(231, 255, 248, 0.336); */
+   padding: 50px;
+   margin-top: 50px;
+   border-radius: 15px;
+
+}
+
+.easter {
+   color: #faf2da;
+   font-weight: 900;
+   font-family:Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   font-size: 1.3em;
+}
+
+.navbar.navbar-light {
+   background-color: #8e9775;
+   padding: 5px 25px;
+}
+
+.navbar-light .navbar-text {
+   color: #faf2da;
+   font-weight: 100;
+}
+
+.btn.btn-danger {
+   background-color: #4a503d;
+   color: #faf2da;
+   border: 2px solid #4a503d;
+   border-radius: 10px;
+   margin-left: 20px;
+}
+
+.btn.btn-danger:hover {
+   background-color: #393d2e;
+   color: #faf2da;
+   border: 2px solid #393d2e;
+   border-radius: 10px;
+}
+
+.btn.btn-warning {
+   background-color: #8e9775;
+   color: #faf2da;
+   border: 2px solid #8e9775;
+   border-radius: 10px;
+}
+
+.btn.btn-warning:hover {
+   background-color: #71795d;
+   color: #faf2da;
+   border: 2px solid #71795d;
+   border-radius: 10px;
+}
+
+
+.btn.btn-success.reg {
+   border-radius: 25px;
+   background-color: #8e9775;
+   border: 1px solid #4a503d;
+   min-width: 150px;
+   margin-top: 25px;
+}
+
+.col-4 {
+   background-color: rgba(255, 255, 255, 0.8);
+   position: relative;
+   width: 270px;
+   height: 340px;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+.cols-4 img {
+   flex-shrink: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+
+/* Plant Images */
+.rounded.mx-auto.d-block {
+   margin-bottom: 70px;
+   width: 250px;
+   height: 250px;
+   object-fit: cover;
+   object-position: 50% 50%;
+   transition: transform .5s;
+}
+
+.rounded.mx-auto.d-block:hover {
+   transform: scale(1.1);
+}
+
+/* Plant Name, Care, Env Info */
+.info {
+   position:absolute;
+   top: 69%;
+   left: 0;
+   right: 0;
+   padding: 6px 0 10px 0;
+   margin-bottom: 15px;
+   background-color: rgba(255, 255, 255, 1);
+}
+
+.info a {
+   text-decoration: none;
+   font-weight: 800;
+   font-size: 1.3em;
+   color: #8e9775;
+}
+
+.info a:hover{
+   color: #4a503d !important;
+}
+
+.info p {
+   margin-top: 5px;
+   line-height: 5px;
+}
+
+.sb {
+   font-size: 0.7em !important;
+}
+
+.row.row-cols-4 {
+   max-width: 1300px;
+   padding: 25px 0;
+}
+
+.row.row-cols-4 img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%
+}
+
+.forms {
+   margin: 40px 20%;
+}
+
+.forms h1 {
+   margin: 50px 0;
+}
+
+.forms {
+   background-color: rgb(255, 255, 255, 0.80);
+   padding: 50px;
+   border-radius: 25px;
+}
+
+.welcome {
+   font-weight: 800;
+}
+
+.welcome66 {
+   color: rgb(255, 0, 0);
+   font-weight: 800;
+}
+
+
+#emitter {
+   visibility: hidden;
+   background-color: #222;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   top: 40%;
+   left: 0%;
+ }
+ .dot-container {
+   position:absolute;
+   left:0;
+   top:0;
+   overflow:visible;
+   z-index:5000;
+   pointer-events:none;
+ }
+ .dot {
+   position: absolute;
+   pointer-events: none; /*performance optimization*/
+ }
