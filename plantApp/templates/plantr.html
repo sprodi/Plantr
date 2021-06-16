@@ -25,12 +25,10 @@
             </a>
             <div class="easter"></div>
             <form class="d-flex">
-               <div id="emitter">
-                  <span class="navbar-text">
-                     Welcome {{ user.alias }}! &nbsp;&nbsp; 
-                     <a href="users/{{user.id}}">Account</a>
-                  </span>
-               </div>
+               <span class="navbar-text">
+                  Welcome {{ user.alias }}! &nbsp;&nbsp; 
+                  <a href="users/{{user.id}}">Account</a>
+               </span>
                <a href="/logout" class="btn btn-danger" role="button">
                   Sign Out
                 </a>
