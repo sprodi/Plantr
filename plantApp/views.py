@@ -78,10 +78,13 @@ def userProfile(request, user_id):
         return redirect('/')
    user = User.objects.get(id = user_id)
    plant = Plant.objects.all()
+
    current_user = User.objects.get(id=request.session['user_id'])
+   cu_posts = Plant.objects.filter(poster=user)
 
    context = {
       'current_user': current_user,
+      'cu_posts': cu_posts,
       'user': user,
       'plant': plant,
    }      

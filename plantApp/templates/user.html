@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg overflow-auto">
                <h1>{{ user.user_plants.count }} Submitted Plants</h1>
-               {% for plant in plant %}
+               {% for plant in cu_posts %}
                <div class="row">
                   <div class='user_plants'>
                      <a href="/plantr/{{ plant.id }}">{{ plant.plantName }}</a>
