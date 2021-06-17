@@ -18,6 +18,7 @@ Website that allows users to upload various plants and provide instructions for 
   - `partytime`: Triggers confetti fireworks.
 
 # Screenshots
+![plantr-welcome](https://user-images.githubusercontent.com/65821328/122330047-4ed0b500-cee7-11eb-8667-953306aebfb8.mov)
 ![plantr-home](https://user-images.githubusercontent.com/65821328/122329380-2dbb9480-cee6-11eb-925a-cf0c10512468.png)
 ![plantr-add](https://user-images.githubusercontent.com/65821328/122329392-31e7b200-cee6-11eb-8210-2fa661fae95e.png)
 ![plantr-user](https://user-images.githubusercontent.com/65821328/122329396-3318df00-cee6-11eb-83c8-609969634080.png)
