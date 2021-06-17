@@ -3,9 +3,9 @@ Website that allows users to upload various plants and provide instructions for 
 
 # Features
 - User registration / login with validations
-- Users able to add their own plant/instructions and favorite other plant submissions
-- Users are able to delete their own Plant submissions
-- Users are able to favorite plant posts
+- Submit plant/instructions with validations
+- Favorite submissions
+- Delete their own Plant submissions
 - Responsive design through Bootstrap
 
 # Extras
