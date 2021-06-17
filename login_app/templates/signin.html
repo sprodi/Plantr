@@ -23,54 +23,30 @@
       </div>
     </nav>
    <div class='container-sm'>
-      <!-- <button class='dark_button' onclick="myFunction()"><i class="fas fa-moon"></i></button> -->
       <div class='forms'>
 
-            <h1>Sign In</h1>
+         <h1>Sign In</h1>
 
 
-            {% for message in messages %}
-            <p>{{ message }}</p>
-            {% endfor %}
+         {% for message in messages %}
+         <p>{{ message }}</p>
+         {% endfor %}
 
-            <!-- BOOTSTRAP FORM -->
-            <form action='/login' method='POST' class="row g-3">
-               {% csrf_token %}
-               <div class="col-12">
-                  <label for="inputAddress2" class="form-label">Email</label>
-                  <input type="email" name="email" class="form-control" id="inputEmail2">
-               </div>
-               <div class="col-12">
-                  <label for="inputCity" class="form-label">Password</label>
-                  <input type="password" name="password" class="form-control" id="inputPassword6">
-               </div>
-               <div class="col-12 button text-center">
-                  <button type="submit" class="btn btn-success reg">Sign In</button>
-               </div>
-            </form>
-      <!-- <div class='forms'>
-         <div class='header'>
-            <h1>Login</h1>
-         </div>
-         <div class='inputs'>
-            <form action='/login' method="POST">
-               {% csrf_token %}
-               <table>
-                  <tr>
-                     <td>Email:</td>
-                     <td><input type='text' name='email' placeholder='Email' class='form_input'></td>
-                  </tr>
-                  <tr>
-                     <td>Password:</td>
-                     <td><input type='password' name='password' placeholder='Password' class='form_input'></td>
-                  </tr>
-               </table>
-
-               <div class='button'>
-                  <input type='submit' value='Log In' class='form_button'>
-               </div>
-            </form>
-         </div> -->
+         <!-- BOOTSTRAP FORM -->
+         <form action='/login' method='POST' class="row g-3">
+            {% csrf_token %}
+            <div class="col-12">
+               <label for="inputAddress2" class="form-label">Email</label>
+               <input type="email" name="email" class="form-control" id="inputEmail2">
+            </div>
+            <div class="col-12">
+               <label for="inputCity" class="form-label">Password</label>
+               <input type="password" name="password" class="form-control" id="inputPassword6">
+            </div>
+            <div class="col-12 button text-center">
+               <button type="submit" class="btn btn-success reg">Sign In</button>
+            </div>
+         </form>
       </div>
    </div>
 
@@ -80,15 +56,4 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
 </body>
-<!-- DARK MODE -->
-<!-- <script type="text/javascript">
-   function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-   }
-
-   $("button").click(function(){
-      $(this).find("i").toggleClass("fas fa-moon").toggleClass("fas fa-sun");
-});
-</script> -->
 </html>

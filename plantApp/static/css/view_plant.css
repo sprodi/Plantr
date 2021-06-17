@@ -5,7 +5,6 @@
 }
 
 body {
-   /* border: red 1px solid; */
    width: 100%;
    background: #8e9775;
    background: url("../../../static/plantr.jpeg") no-repeat center center fixed;
@@ -13,7 +12,6 @@ body {
 }
 
 .container-lg.main {
-   /* background-color: rgba(231, 255, 248, 0.336); */
    padding: 50px;
    margin-top: 50px;
    border-radius: 15px;
@@ -98,11 +96,11 @@ body {
 }
 
 .col-lg {
-   background-color: rgba(255, 255, 255, 0.5);
+   background-color: rgba(255, 255, 255, 0.8);
    position: relative;
    margin: 10px;
    padding: 25px;
-   height: 550px;
+   min-height: 550px;
    margin: 10px;
    justify-content: center;
    align-items: center;
@@ -144,11 +142,6 @@ body {
    margin: 50px 0;
 }
 
-.forms {
-   background-color: rgb(255, 255, 255, 0.80);
-   padding: 50px;
-   border-radius: 25px;
-}
 
 .plant {
    font-weight: 800;

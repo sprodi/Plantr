@@ -44,13 +44,13 @@
                   <a href="/plantr/{{ plant.id }}"><img src="../static/default_plant.jpg" class="rounded mx-auto d-block" alt="..."></a>
                {% endif %}
             </div>
-            <div class="col-lg d-flex align-items-center">
+            <div class="col-lg d-flex align-items-center overflow-auto">
                <div class='info'>
                   <h1>{{ plant.plantName }}</h1>
                   <h4>Alt Name: {{ plant.plantAlt }}</h4>
                   <p><b>Care:</b> {{ plant.level }}</p>
                   <p><b>Environment:</b> {{ plant.env }}</p>
-                  <p><b>Instructions:</b> {{ plant.desc }}</p>
+                  <p><b>Instructions:</b> {{ plant.desc|linebreaks }}</p>
                   <p><b>Submitted by:</b> <a href="users/{{ plant.poster.id }}">{{ plant.poster.alias }}</a></p>
                   {% if user in plant.users_fav.all %}
                   <a a href="{{ plant.id }}/unfav" role="button"><i class="fa fa-heart" aria-hidden="true"></i></a><span class='liked'>Liked</span>

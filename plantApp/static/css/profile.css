@@ -5,7 +5,6 @@
 }
 
 body {
-   /* border: red 1px solid; */
    width: 100%;
    background: #8e9775;
    background: url("../../../static/plantr.jpeg") no-repeat center center fixed;
@@ -13,7 +12,6 @@ body {
 }
 
 .container-lg.main {
-   /* background-color: rgba(231, 255, 248, 0.336); */
    padding: 50px;
    margin-top: 50px;
    border-radius: 15px;
