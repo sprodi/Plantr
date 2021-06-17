@@ -19,8 +19,8 @@ class plantsManager(models.Manager):
 
       if len(postData['desc']) < 10:
          errors['desc'] = "Instruction must be at least 10 characters long."
-      if len(postData['desc']) > 255:
-         errors['desc'] = "Instruction must be at less than 255 characters long."
+      if len(postData['desc']) > 500:
+         errors['desc'] = "Instruction must be at less than 500 characters long."
       return errors
 
 
