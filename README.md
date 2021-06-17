@@ -17,7 +17,7 @@ Website that allows users to upload various plants and provide instructions for 
   - `order66`: Triggers star wars audio, changes background to younglings (RIP) and changes "Welcome" message.
   - `partytime`: Triggers confetti fireworks.
 
-#Previews
+# Screenshots
 ![plantr-home](https://user-images.githubusercontent.com/65821328/122329380-2dbb9480-cee6-11eb-925a-cf0c10512468.png)
 ![plantr-add](https://user-images.githubusercontent.com/65821328/122329392-31e7b200-cee6-11eb-8210-2fa661fae95e.png)
 ![plantr-user](https://user-images.githubusercontent.com/65821328/122329396-3318df00-cee6-11eb-83c8-609969634080.png)
