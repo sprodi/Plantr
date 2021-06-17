@@ -35,18 +35,13 @@
    <div class='container-sm'>
       <div class='forms'>
          <h3>Add a Plant</h3>
-
-            {% for message in messages %}
-            <p>{{ message }}</p>
-            {% endfor %}
-
-            <!-- <form action="add" enctype="multipart/form-data">
-               {% csrf_token %}
-               {{ form.as_p }}
-               <button type='submit'>Submit New Post</button>
-            </form> -->
+            <div id='messages'>
+               {% for message in messages %}
+               <p>{{ message }}</p>
+               {% endfor %}
+            </div>
  
-            <form action='add' method="POST" enctype="multipart/form-data" class="row g-3">
+            <form action='submit' method="POST" enctype="multipart/form-data" class="row g-3">
                {% csrf_token %}
                <div class="col-md-6">
                   <label for="inputPlant4" class="form-label">Plant</label>
@@ -59,7 +54,7 @@
                <div class="col-md-6">
                   <label for="inputLevel" class="form-label">Care Difficulty</label>
                      <select id="level" name="level" class="form-select">
-                        <option seleceted>Choose...</option>
+                        <option selected hidden value=''>Choose...</option>
                         <option value='Easy'>Easy</option>
                         <option value='Medium'>Medium</option>
                         <option value='Hard'>Hard</option>         
@@ -68,9 +63,9 @@
                   <div class="col-md-6">
                   <label for="inputEnv" class="form-label">Environment</label>
                      <select id="env" name="env" class="form-select">
-                        <option seleceted>Choose...</option>
+                        <option selected hidden value=''>Choose...</option>
                         <option value='Full Sun'>Full Sun</option>
-                        <option value='Light'>Part Sun, Part Shade</option>
+                        <option value='Part Sun, Party Shade'>Part Sun, Part Shade</option>
                         <option value='Shade'>Shade</option>
                         <option value='Dark'>Dark</option>       
                      </select>

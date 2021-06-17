@@ -4,45 +4,38 @@ from django.conf.urls.static import static
 
 
 class plantsManager(models.Manager):
-   def plant_validator(self, post_data):
+   def plant_validator(self, postData):
       errors = {}
 
-      if len(post_data['plantName']) < 2:
+      if len(postData['plantName']) < 2:
          errors['plantName'] = "Plant name must be at least 2 characters long."
-      if len(post_data['plantName']) > 255:
+      if len(postData['plantName']) > 255:
          errors['plantName'] = "Plant name must be at less than 50 characters long."
+      if len(postData['level']) < 1:
+         errors['level'] = "Please choose Care Difficulty"
 
-      if len(post_data['plantAlt']) < 2:
-         errors['plantAlt'] = "Environtment name must be at least 2 characters long."
-      if len(post_data['plantAlt']) > 255:
-         errors['plantAlt'] = "Plant name must be at less than 255 characters long."
+      if len(postData['env']) < 1:
+         errors['env'] = "Please choose type of Envorinment"
 
-      # Figure out how to add radio field for level
-      # Figure out how to add drop down field for env
-
-      if len(post_data['desc']) < 2:
-         errors['desc'] = "Instruction must be at least 2 characters long."
-      if len(post_data['desc']) > 255:
+      if len(postData['desc']) < 10:
+         errors['desc'] = "Instruction must be at least 10 characters long."
+      if len(postData['desc']) > 255:
          errors['desc'] = "Instruction must be at less than 255 characters long."
-
-      # if (post_data['plantImg']) < 1:
-      #    errors['plantImg'] = "Must upload plant image."
-
-      
-      # **** CHANGE THIS TO PLANT CHECK ****
-      # TitleCheck = Book.objects.filter(title=post_data['title'])
-      # if len(TitleCheck) > 0:
-      #    errors['bookExists'] = "Please visit this books page and add the review there"
-      # return errors
-
+      return errors
 
 
 class Plant(models.Model):
+   LEVELS = (
+   (0, ''),
+   (1, 'Easy'),
+   (2, 'Medium'),
+   (3, 'Hard'),
+)
    poster = models.ForeignKey(User, related_name = "user_plants", on_delete = models.CASCADE)
    plantName = models.CharField(max_length=50)
    plantAlt = models.CharField(max_length=255, blank=True, default='')
    level = models.CharField(max_length=50)
-   env = models.CharField(max_length=50)
+   env = models.CharField(max_length=1, choices=LEVELS)
    desc = models.CharField(max_length=255)
    plantImg = models.ImageField(upload_to='plants/', null=True, blank=True, default='../static/default_plant.jpg')
    users_fav = models.ManyToManyField(User, related_name = 'fav_plants')

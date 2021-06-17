@@ -21,12 +21,49 @@ def index(request):
    }
    return render(request, 'plantr.html', context)
 
+
+# def addPlant(request):
+#    errors = Plant.objects.plant_validator(request.POST)
+
+#    if len(errors) > 0:
+#       for k in v in errors.items():
+#          messages.errors(request, v)
+#       return redirect('/plantr/add')
+
+#    else:
+#       Plant.objects.create(
+#          plantName = request.POST.get('plantName'),
+#          plantAlt = request.POST.get('plantAlt'),
+#          level = request.POST.get('level'),
+#          env = request.POST.get('env'),
+#          desc = request.POST.get('desc'),
+#          poster = User.objects.get(id=request.session['user_id']),
+#          plantImg = request.FILES.get('plantImg'),
+#       )
+#       # return redirect('/plantr')
+#       return render(request, 'add_plant.html')
+
 def addPlant(request):
    if 'user_id' not in request.session:
         messages.error(request, "Must be logged in!")
         return redirect('/')
 
-   if request.method=='POST':
+   else:
+      current_user = User.objects.get(id=request.session['user_id'])
+
+      context = {
+         "plants": Plant.objects.all(),
+         "user": current_user,
+      }
+      return render(request, 'add_plant.html', context)
+
+def validatePlant(request):
+   errors = Plant.objects.plant_validator(request.POST)
+   if errors:
+      for k, v in errors.items():
+         messages.error(request, v)
+      return redirect('/plantr/add')
+   else:
       Plant.objects.create(
          plantName = request.POST['plantName'],
          plantAlt = request.POST['plantAlt'],
@@ -37,14 +74,6 @@ def addPlant(request):
          plantImg = request.FILES.get('plantImg'),
       )
       return redirect('/plantr')
-   else:
-      current_user = User.objects.get(id=request.session['user_id'])
-
-      context = {
-         "plants": Plant.objects.all(),
-         "user": current_user,
-      }
-      return render(request, 'add_plant.html', context)
 
 
 def delPlant(request, plant_id):
