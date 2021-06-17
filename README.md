@@ -18,8 +18,9 @@ Website that allows users to upload various plants and provide instructions for 
   - `partytime`: Triggers confetti fireworks.
 
 # Screenshots
-https://user-images.githubusercontent.com/65821328/122330047-4ed0b500-cee7-11eb-8667-953306aebfb8.mov
-![plantr-home](https://user-images.githubusercontent.com/65821328/122329380-2dbb9480-cee6-11eb-925a-cf0c10512468.png)
-![plantr-add](https://user-images.githubusercontent.com/65821328/122329392-31e7b200-cee6-11eb-8210-2fa661fae95e.png)
-![plantr-user](https://user-images.githubusercontent.com/65821328/122329396-3318df00-cee6-11eb-83c8-609969634080.png)
-![plantr-plant](https://user-images.githubusercontent.com/65821328/122329398-34e2a280-cee6-11eb-9a9f-a7da72f3a763.png)
+![plantr-login](https://user-images.githubusercontent.com/65821328/122330473-1bdaf100-cee8-11eb-989d-0a8c05ab74c6.png)
+![plantr-signup](https://user-images.githubusercontent.com/65821328/122330483-1f6e7800-cee8-11eb-8d85-f63d741a76a4.png)
+![plantr-signin](https://user-images.githubusercontent.com/65821328/122330486-21383b80-cee8-11eb-8cb2-78c43efbf5a5.png)
+![plantr-home](https://user-images.githubusercontent.com/65821328/122330511-2ac1a380-cee8-11eb-8012-415a852fe6c4.png)
+![plantr-plant](https://user-images.githubusercontent.com/65821328/122330516-2eedc100-cee8-11eb-897f-07624c23d863.png)
+![plantr-user](https://user-images.githubusercontent.com/65821328/122330522-30b78480-cee8-11eb-9177-f9888abc33ca.png)
