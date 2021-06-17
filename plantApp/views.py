@@ -21,33 +21,10 @@ def index(request):
    }
    return render(request, 'plantr.html', context)
 
-
-# def addPlant(request):
-#    errors = Plant.objects.plant_validator(request.POST)
-
-#    if len(errors) > 0:
-#       for k in v in errors.items():
-#          messages.errors(request, v)
-#       return redirect('/plantr/add')
-
-#    else:
-#       Plant.objects.create(
-#          plantName = request.POST.get('plantName'),
-#          plantAlt = request.POST.get('plantAlt'),
-#          level = request.POST.get('level'),
-#          env = request.POST.get('env'),
-#          desc = request.POST.get('desc'),
-#          poster = User.objects.get(id=request.session['user_id']),
-#          plantImg = request.FILES.get('plantImg'),
-#       )
-#       # return redirect('/plantr')
-#       return render(request, 'add_plant.html')
-
 def addPlant(request):
    if 'user_id' not in request.session:
         messages.error(request, "Must be logged in!")
         return redirect('/')
-
    else:
       current_user = User.objects.get(id=request.session['user_id'])
 
@@ -76,6 +53,24 @@ def validatePlant(request):
       return redirect('/plantr')
 
 
+def updatePlant(request, plant_id):
+   errors = Plant.objects.plant_validator(request.POST)
+   if errors:
+      for k, v in errors.items():
+         messages.error(request, v)
+         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+   else:
+      plantToUpdate = Plant.objects.get(id = plant_id)
+      plantToUpdate.plantName = request.POST["plantName"]
+      plantToUpdate.plantAlt = request.POST["plantAlt"]
+      plantToUpdate.level = request.POST["level"]
+      plantToUpdate.env = request.POST["env"]
+      plantToUpdate.desc = request.POST["desc"]
+      plantToUpdate.save()
+      return redirect('/plantr')
+
+
 def delPlant(request, plant_id):
    if 'user_id' not in request.session:
         messages.error(request, "Must be logged in!")
@@ -84,8 +79,6 @@ def delPlant(request, plant_id):
    delPlant = Plant.objects.get(id = plant_id)
    delPlant.delete()
    return HttpResponseRedirect('../')
-
-
 
 def viewPlant(request, plant_id):
    if 'user_id' not in request.session:
@@ -99,6 +92,20 @@ def viewPlant(request, plant_id):
       'user': current_user,
    }
    return render(request, 'view_plant.html', context)
+
+
+def editPlant(request, plant_id):
+   if 'user_id' not in request.session:
+        messages.error(request, "Must be logged in!")
+        return redirect('/')
+   
+   user = User.objects.get(id=request.session['user_id'])
+   plantToEdit = Plant.objects.get(id = plant_id)
+   context = {
+      'user': user,
+      'plant': plantToEdit
+   }
+   return render(request, 'edit_plant.html', context)
 
 
 def userProfile(request, user_id):

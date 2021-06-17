@@ -59,7 +59,7 @@
                   {% endif %}
 
                   {% if user == plant.poster %}
-                  <p class='.del'><a href="{{ plant.id }}/delete" class="btn btn-warning" role="button">Delete Plant</a></p>
+                  <p class='.del'><a href="{{ plant.id }}/edit" class="btn btn-warning" role="button">Edit Plant</a> <a href="{{ plant.id }}/delete" class="btn btn-warning" role="button">Delete Plant</a></p>
                   {% endif %}
                </div>
             </div>
