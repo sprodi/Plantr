@@ -5,7 +5,7 @@ Website that allows users to upload various plants and provide instructions for 
 - User registration / login with validations
 - Submit plant/instructions with validations
 - Favorite submissions
-- Delete their own Plant submissions
+- Edit/Delete their own Plant submissions
 - Responsive design through Bootstrap
 - Easter eggs through javascript
 
