@@ -50,12 +50,13 @@
                {% for plant in cu_posts %}
                <div class="row">
                   <div class='user_plants'>
-                     <a href="/plantr/{{ plant.id }}">{{ plant.plantName }}</a>
                      {% if plant.plantImg %}
+                     <a href="/plantr/{{ plant.id }}">{{ plant.plantName }}</a>
                         <a href="/plantr/{{ plant.id }}"><img src="{{ plant.plantImg.url }} " class="rounded mx-auto d-block" alt="..."></a>
-                           {% else %}
-                           <a href="/plantr/{{ plant.id }}"><img src="/static/default_plant.jpg" class="rounded mx-auto d-block" alt="..."></a>
-                        {% endif %}
+                     {% else %}
+                     <a href="/plantr/{{ plant.id }}">{{ plant.plantName }}</a>
+                        <a href="/plantr/{{ plant.id }}"><img src="/static/default_plant.jpg" class="rounded mx-auto d-block" alt="..."></a>
+                     {% endif %}
                   </div>
                </div>
                {% endfor %}
