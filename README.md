@@ -10,6 +10,7 @@ Website that allows users to upload various plants and provide instructions for 
 - Easter eggs through JavaScript
 
 # Extras
+*** *db.sqlite3 added to populate site*
 - 3 easter eggs
 
   While on `/plantr`, type the following codes followed by pressing `Enter/Return` to trigger the easter eggs.
