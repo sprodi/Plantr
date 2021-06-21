@@ -60,7 +60,7 @@ body {
    padding: 0;
    background-color: rgba(255, 255, 255, 0.8);
    position: relative;
-   width: 30.5%;
+   width: 220px;
    height: 250px;
    display: flex;
    justify-content: center;
@@ -156,4 +156,14 @@ h1 {
 
 .info {
    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+   .col-lg {
+      margin: 15px 0;
+   }
+
+   .row.row-cols-4 {
+      justify-content: center !important;
+   }
 }
