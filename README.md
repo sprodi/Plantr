@@ -22,7 +22,8 @@ Website that allows users to upload various plants and provide instructions for 
 ![plantr-01](https://user-images.githubusercontent.com/65821328/122810980-d1a99500-d284-11eb-9465-153084deb0b5.png)
 ![plantr-02](https://user-images.githubusercontent.com/65821328/122810988-d4a48580-d284-11eb-8889-4557a55233bf.png)
 ![plantr-03](https://user-images.githubusercontent.com/65821328/122810993-d66e4900-d284-11eb-804c-a95e90569bba.png)
-![plantr-04](https://user-images.githubusercontent.com/65821328/122810997-d79f7600-d284-11eb-9081-8262c8fe73d6.png)
+![plantr-04](https://user-images.githubusercontent.com/65821328/123008312-85874f00-d36f-11eb-991e-5982d7080e2d.png)
 ![plantr-05](https://user-images.githubusercontent.com/65821328/122811002-d8380c80-d284-11eb-9773-679c66da1b85.png)
 ![plantr-06](https://user-images.githubusercontent.com/65821328/122811005-d9693980-d284-11eb-95a5-b2b4c92788a9.png)
 ![plantr-07](https://user-images.githubusercontent.com/65821328/122811009-da01d000-d284-11eb-9154-6f9cbcd10491.png)
+
